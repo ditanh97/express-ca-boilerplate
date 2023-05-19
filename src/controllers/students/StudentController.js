@@ -15,8 +15,10 @@ module.exports = (dependecies) => {
         const { firstName, lastName, email } = req.body;
         // call use case
         AddStudentCommand.Execute(firstName, lastName, email).then((response) => {
+            console.log('tessst');
             res.json(response);
         }, (err) => {
+            console.log('error', err);
             next(err);
         });
     };
