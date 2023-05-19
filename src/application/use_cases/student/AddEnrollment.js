@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-export default (StudentRepository) => {
+const AddEnrollment = (StudentRepository) => {
 
     const Execute = async (studentId, enrollment) => {
         const student = await StudentRepository.getById(studentId);
@@ -25,3 +25,5 @@ export default (StudentRepository) => {
         Execute
     };
 };
+
+export {AddEnrollment};

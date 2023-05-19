@@ -1,6 +1,6 @@
 import Student from '../../../entities/Student.js';
 
-export default (StudentRepository, CrmServices) => {
+const AddStudent = (StudentRepository, CrmServices) => {
 
     async function Execute(firstName, lastName, email) {
         const student = await StudentRepository.getByEmail(email);
@@ -30,3 +30,4 @@ export default (StudentRepository, CrmServices) => {
         Execute
     };
 };
+export {AddStudent};

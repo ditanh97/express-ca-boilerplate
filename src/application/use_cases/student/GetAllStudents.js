@@ -1,4 +1,4 @@
-export default (StudentRepository) => {
+const GetAllStudents = (StudentRepository) => {
 
     async function Execute(firstName, lastName, email) {
         return StudentRepository.getAll();
@@ -8,3 +8,5 @@ export default (StudentRepository) => {
         Execute
     };
 };
+
+export {GetAllStudents};

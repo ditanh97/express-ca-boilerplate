@@ -1,4 +1,4 @@
-export default (StudentRepository) => {
+const GetStudent = (StudentRepository) => {
 
     async function Execute(studentId) {
         return StudentRepository.getById(studentId);
@@ -8,3 +8,4 @@ export default (StudentRepository) => {
         Execute
     };
 };
+export {GetStudent};
