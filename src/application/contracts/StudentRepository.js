@@ -1,7 +1,7 @@
 /* eslint-disable no-empty-function */
 /* eslint-disable no-useless-constructor */
 /* eslint-disable class-methods-use-this */
-module.exports = class StudentRepository {
+export default class StudentRepository {
     constructor() { }
 
     add(studentInstance) {

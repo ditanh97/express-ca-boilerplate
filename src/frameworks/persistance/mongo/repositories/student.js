@@ -1,7 +1,7 @@
-const UserModel = require('../models/student');
-const StudentRepository = require('../../../../application/contracts/StudentRepository');
+import UserModel from '../models/student.js';
+import StudentRepository from '../../../../application/contracts/StudentRepository.js';
 
-module.exports = class MongoStudentRepository extends StudentRepository {
+export default class MongoStudentRepository extends StudentRepository {
     // const findByProperty = (params) => {
     //     return UserModel.find(omit(params, 'page', 'perPage'))
     //         .skip(params.perPage * params.page - params.perPage)

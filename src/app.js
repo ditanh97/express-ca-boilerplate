@@ -1,8 +1,8 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const routes = require('./frameworks/web/routes');
-const projectDependencies = require('./config/projectDependencies');
-const ErrorHandler = require('./frameworks/common/ErrorHandler');
+import express from 'express';
+import bodyParser from 'body-parser';
+import routes from './frameworks/web/routes/index.js';
+import projectDependencies from './config/projectDependencies.js';
+import ErrorHandler from './frameworks/common/ErrorHandler.js';
 
 const app = express();
 const port = process.env.PORT || 3000;

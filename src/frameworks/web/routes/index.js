@@ -1,5 +1,5 @@
-const express = require('express');
-const students = require('./students');
+import express from 'express';
+import students from './students.js';
 
 const apiRouter = (dependencies) => {
     const routes = express.Router();
@@ -12,4 +12,4 @@ const apiRouter = (dependencies) => {
 };
 
 
-module.exports = apiRouter;
+export default apiRouter;

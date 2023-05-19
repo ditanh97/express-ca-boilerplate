@@ -1,4 +1,4 @@
-const winston = require('./winston');
+import winston from './winston.js';
 
 const ErrorHandler = (err, req, res, next) => {
     // set locals, only providing error in development
@@ -13,4 +13,4 @@ const ErrorHandler = (err, req, res, next) => {
     res.json({ error: err.message });
 };
 
-module.exports = ErrorHandler;
+export default ErrorHandler;

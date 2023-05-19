@@ -1,4 +1,4 @@
-module.exports = class Enrollment {
+export default class Enrollment {
     constructor(course, grade) {
         this.course = course;
         this.grade = grade;

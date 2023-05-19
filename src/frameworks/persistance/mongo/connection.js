@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const DatabaseServices = require('../../../application/contracts/DatabaseServices');
-const MongoStudentRepository = require('./repositories/student');
+import DatabaseServices from '../../../application/contracts/DatabaseServices.js';
+import MongoStudentRepository from './repositories/student.js';
 
 
-module.exports = class MongoDatabaseServices extends DatabaseServices {
+export default class MongoDatabaseServices extends DatabaseServices {
     constructor() {
         super();
         this.mongo = {

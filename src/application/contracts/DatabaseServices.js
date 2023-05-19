@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-module.exports = class DatabaseServices {
+export default class DatabaseServices {
 
     constructor() {
         this.studentRepository = null;

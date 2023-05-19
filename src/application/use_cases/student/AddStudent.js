@@ -1,6 +1,6 @@
-const Student = require('../../entities/Student');
+import Student from '../../../entities/Student.js';
 
-module.exports = (StudentRepository, CrmServices) => {
+export default (StudentRepository, CrmServices) => {
 
     async function Execute(firstName, lastName, email) {
         const student = await StudentRepository.getByEmail(email);

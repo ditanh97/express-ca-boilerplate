@@ -1,5 +1,5 @@
-const express = require('express');
-const StudentController = require('../../../controllers/students/StudentController');
+import express from 'express';
+import StudentController from '../../../controllers/students/StudentController.js';
 
 // address - api/students
 // load dependencies
@@ -20,4 +20,4 @@ const studentsRouter = (dependencies) => {
 };
 
 
-module.exports = studentsRouter;
+export default studentsRouter;

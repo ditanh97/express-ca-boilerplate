@@ -1,6 +1,6 @@
-const CrmServices = require('../../application/contracts/CrmServices');
+import CrmServices from '../../application/contracts/CrmServices.js';
 
-module.exports = class UniversityCrmServices extends CrmServices {
+export default class UniversityCrmServices extends CrmServices {
 
     notify(studentDetails) {
         return Promise.resolve('external crm system was notified');

@@ -1,5 +1,5 @@
-const appRoot = require('app-root-path');
-const winston = require('winston');
+import appRoot from 'app-root-path';
+import winston from 'winston';
 
 
 const options = {
@@ -36,4 +36,4 @@ logger.stream = {
         logger.info(message);
     },
 };
-module.exports = logger;
+export default logger;

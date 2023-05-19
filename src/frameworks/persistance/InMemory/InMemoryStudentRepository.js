@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable arrow-body-style */
-const StudentRepository = require('../../../application/contracts/StudentRepository');
+import StudentRepository from '../../../application/contracts/StudentRepository.js';
 
-module.exports = class InMemoryStudentRepository extends StudentRepository {
+export default class InMemoryStudentRepository extends StudentRepository {
 
     constructor() {
         super();

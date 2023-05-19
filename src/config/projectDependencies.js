@@ -1,8 +1,8 @@
-const InMemoryDatabaseServices = require('../frameworks/persistance/InMemory/InMemoryDatabaseServices');
-const MongoDatabaseServices = require('../frameworks/persistance/mongo/connection');
-const UniversityCrmServices = require('../frameworks/externalServices/UniversityCrmServices');
+import InMemoryDatabaseServices from '../frameworks/persistance/InMemory/InMemoryDatabaseServices.js';
+import MongoDatabaseServices from '../frameworks/persistance/mongo/connection.js';
+import UniversityCrmServices from '../frameworks/externalServices/UniversityCrmServices.js';
 
-module.exports = (() => {
+export default (() => {
     return {
         // DatabaseService: new InMemoryDatabaseServices(),
         DatabaseService: new MongoDatabaseServices(),

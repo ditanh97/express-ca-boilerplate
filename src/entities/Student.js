@@ -1,4 +1,4 @@
-module.exports = class Student {
+export default class Student {
     constructor(firstName, lastName, email, enrollments) {
         this.id = null;
         this.firstName = firstName;

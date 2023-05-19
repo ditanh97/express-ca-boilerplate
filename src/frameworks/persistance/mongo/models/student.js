@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from'mongoose';
 
 // eslint-disable-next-line prefer-destructuring
 const Schema = mongoose.Schema;
@@ -22,4 +22,4 @@ const UserSchema = new Schema({
 const UserModel = mongoose.model('students', UserSchema);
 
 
-module.exports = UserModel;
+export default UserModel;

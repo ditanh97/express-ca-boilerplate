@@ -1,6 +1,4 @@
-const Student = require('../../entities/Student');
-
-module.exports = (StudentRepository) => {
+export default (StudentRepository) => {
 
     async function Execute(firstName, lastName, email) {
         return StudentRepository.getAll();

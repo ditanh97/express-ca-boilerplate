@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-module.exports = (StudentRepository) => {
+export default (StudentRepository) => {
 
     const Execute = async (studentId, enrollment) => {
         const student = await StudentRepository.getById(studentId);
