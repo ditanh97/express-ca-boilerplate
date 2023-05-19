@@ -24,7 +24,7 @@ module.exports = (StudentRepository, CrmServices) => {
         // notify crm system
         await CrmServices.notify(newStudent);
 
-        return 'student added successfully';
+        return newStudent;
     }
     return {
         Execute
