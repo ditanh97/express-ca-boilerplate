@@ -1,5 +1,5 @@
 const InMemoryDatabaseServices = require('../frameworks/persistance/InMemory/InMemoryDatabaseServices');
-const MongoDatabaseServices = require('../frameworks/persistance/mongo/mongoDatabaseServices');
+const MongoDatabaseServices = require('../frameworks/persistance/mongo/connection');
 const UniversityCrmServices = require('../frameworks/externalServices/UniversityCrmServices');
 
 module.exports = (() => {
