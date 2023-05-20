@@ -1,6 +1,6 @@
 import { createTerminus } from '@godaddy/terminus';
 
-export default function ServerConfig (app, mongoose, serverInit, config){
+export default function serverConfig(app, mongoose, serverInit, config){
     function onSignal() {
         console.log('server is starting cleanup');
         return new Promise((resolve, reject) => {
