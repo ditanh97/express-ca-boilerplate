@@ -1,4 +1,5 @@
 import { createTerminus } from '@godaddy/terminus';
+import logger from '../common/logger.js';
 
 export default function serverConfig(app, mongoose, serverInit, config){
     function onSignal() {
@@ -45,7 +46,11 @@ export default function serverConfig(app, mongoose, serverInit, config){
             onSignal,
             onShutdown
         })
-        .listen(config.port, config.ip, () => console.log(`Server listening on http://${config.ip}:${config.port} in ${app.get('env')}`));
+        .listen(config.port, config.ip, () => {
+          const info = `Server listening on http://${config.ip}:${config.port} in ${app.get('env')}`;
+          console.log(info);
+          logger.info(info);
+        });
     }
     return {startServer};
 }

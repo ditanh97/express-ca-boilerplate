@@ -1,6 +1,7 @@
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
 import compression from 'compression';
+import morganMiddleware from './middlewares/morganLogger.js';
 
 export default function expressConfig(app) {
     app.use(compression());
@@ -24,4 +25,5 @@ export default function expressConfig(app) {
         // Pass to next layer of middleware
         next();
     })
+    app.use(morganMiddleware);
 }

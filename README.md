@@ -21,6 +21,10 @@ Express app does not come with security HTTP headers, it expose sensitive inform
 ## Compression
 `compression` middleware is used for compressing response bodies for all request that traverse through the middleware. This middleware will never compress response that include a `Cache-Control` header with `no-transform` directive, as compressing will transform the body
 
+## Logger
+- `winston` : logger for everything
+- `morgan` : `express` middleware to log HTTP requests and errors
+
 # Reference
 
 - The architecture is inspired from :
