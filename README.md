@@ -1,6 +1,8 @@
 
 Node Clean Architecture
 =======================
+# Project Structure
+![struktur_folder.png](./struktur_folder.png)
 
 # Features
 
