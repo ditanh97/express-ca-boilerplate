@@ -1,7 +1,9 @@
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
+import compression from 'compression';
 
 export default function expressConfig(app) {
+    app.use(compression());
     app.use(helmet());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());

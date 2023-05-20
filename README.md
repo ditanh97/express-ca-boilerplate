@@ -18,10 +18,12 @@ Express app does not come with security HTTP headers, it expose sensitive inform
 ### About Helmet
 `helmet` is `express` middlleware, which is a wrapper of 15 sub-middlewares 
 
+## Compression
+`compression` middleware is used for compressing response bodies for all request that traverse through the middleware. This middleware will never compress response that include a `Cache-Control` header with `no-transform` directive, as compressing will transform the body
 
 # Reference
 
-- The architecture inspired inspire from :
+- The architecture is inspired from :
     - [Royib - Clean Architecture Node](https://github.com/royib/clean-architecture-node)
     - [panagiop - Node CA with mongodb and redis](https://github.com/panagiop/node.js-clean-architecture)
 - Health check - [Health Checks and Graceful Shutdown for Node.js Applications](https://www.godaddy.com/engineering/2018/02/22/announcing-terminus/)
