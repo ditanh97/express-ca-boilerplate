@@ -1,11 +1,16 @@
 import express from 'express';
+import http from 'http';
+import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-import routes from './frameworks/web/routes/index.js';
+import config from './config/config.js';
 import projectDependencies from './config/projectDependencies.js';
+import routes from './frameworks/web/routes/index.js';
+import WebServer from './frameworks/web/server.js';
 import ErrorHandler from './frameworks/common/ErrorHandler.js';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const server = http.createServer(app);
+
 
 // load app only if db is alive and kicking
 projectDependencies.DatabaseService.initDatabase().then(() => {
@@ -21,7 +26,8 @@ projectDependencies.DatabaseService.initDatabase().then(() => {
     app.use(ErrorHandler);
 
     // eslint-disable-next-line arrow-body-style
-    app.listen(port, () => console.log(`http://localhost:${port}`));
+    WebServer(app, mongoose, server, config).startServer();
+
 
 }, (err) => {
     console.log(`db is not ready, err:${err}`);

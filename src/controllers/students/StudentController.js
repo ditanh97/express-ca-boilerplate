@@ -27,7 +27,6 @@ export default (dependecies) => {
 
     const getAllStudents = (req, res, next) => {
         // init use case
-        console.log("funsssi",GetAllStudents)
         const GetAllStudentsQuery = GetAllStudents(studentRepository);
 
         GetAllStudentsQuery.Execute().then((students) => {

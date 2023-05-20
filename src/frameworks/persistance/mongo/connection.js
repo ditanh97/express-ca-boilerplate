@@ -25,7 +25,7 @@ export default class MongoDatabaseServices extends DatabaseServices {
             .connect(this.mongo.uri, this.mongo.options)
             .then(
                 () => {
-                    console.log('Connectttt');
+                    console.log('Connect to MongoDB');
                 },
                 (err) => {
                     console.info('Mongodb error rerere', err);
