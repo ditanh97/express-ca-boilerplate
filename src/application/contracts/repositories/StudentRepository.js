@@ -20,7 +20,11 @@ export default class StudentRepository {
         return Promise.reject(new Error('not implemented'));
     }
 
-    getByEmail(StudentId) {
+    getByEmail(StudentEmail) {
+        return Promise.reject(new Error('not implemented'));
+    }
+
+    getByProperty(params) {
         return Promise.reject(new Error('not implemented'));
     }
 

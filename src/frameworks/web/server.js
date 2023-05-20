@@ -49,7 +49,7 @@ export default function serverConfig(app, mongoose, serverInit, config){
         .listen(config.port, config.ip, () => {
           const info = `Server listening on http://${config.ip}:${config.port} in ${app.get('env')}`;
           console.log(info);
-          logger.info(info);
+          // logger.info(info);
         });
     }
     return {startServer};

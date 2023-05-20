@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable arrow-body-style */
-import StudentRepository from '../../../application/contracts/StudentRepository.js';
+import StudentRepository from '../../../application/contracts/repositories/StudentRepository.js';
 
 export default class InMemoryStudentRepository extends StudentRepository {
 

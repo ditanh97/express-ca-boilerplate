@@ -4,6 +4,9 @@ Node Clean Architecture
 
 # Features
 
+## Auth Middleware
+JSON web token (JWT) is used for securing api and implemented as auth middleware
+
 ## Health Check
 Since application is constanly serving request for users, we want to ship features and fixes as soon as they are ready. If user using the product at the time of the deployment, the app should stop accepting new requests, finish all the ongoing request, and clean up the resources it used. Resources may include database connection or file locks
 - healthcheck end point :`localhost:${port}/healthcheck`

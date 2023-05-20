@@ -6,15 +6,15 @@ import {
 export default (dependecies) => {
 
     const { studentRepository } = dependecies.DatabaseService;
-    const { CrmServices } = dependecies;
+    const { CrmServices, AuthService } = dependecies;
 
     const addNewStudent = (req, res, next) => {
         // init use case
-        const AddStudentCommand = AddStudent(studentRepository, CrmServices);
+        const AddStudentCommand = AddStudent(studentRepository, CrmServices, AuthService);
         // extract student properties
-        const { firstName, lastName, email } = req.body;
+        const { firstName, lastName, email, password } = req.body;
         // call use case
-        AddStudentCommand.Execute(firstName, lastName, email).then((response) => {
+        AddStudentCommand.Execute({firstName, lastName, email, password, role: 1}).then((response) => {
             console.log('tessst');
             res.json(response);
         }, (err) => {

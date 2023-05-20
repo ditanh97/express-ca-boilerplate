@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import DatabaseServices from '../../../application/contracts/DatabaseServices.js';
+import DatabaseServices from '../../../application/contracts/services/DatabaseServices.js';
 import MongoStudentRepository from './repositories/student.js';
 
 

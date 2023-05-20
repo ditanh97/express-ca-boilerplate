@@ -1,5 +1,6 @@
 import express from 'express';
 import StudentController from '../../../controllers/students/StudentController.js';
+import authMiddleware from '../middlewares/authMiddleware.js';
 
 // address - api/students
 // load dependencies
@@ -10,7 +11,7 @@ const studentsRouter = (dependencies) => {
     const controller = StudentController(dependencies);
 
     router.route('/')
-        .get(controller.getAllStudents)
+        .get(authMiddleware, controller.getAllStudents)
         .post(controller.addNewStudent);
     router.route('/:studentId')
         .get(controller.getStudent);

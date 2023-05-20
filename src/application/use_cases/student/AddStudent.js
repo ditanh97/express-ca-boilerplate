@@ -1,12 +1,12 @@
 import Student from '../../../entities/Student.js';
 
-const AddStudent = (StudentRepository, CrmServices) => {
+const AddStudent = (StudentRepository, CrmServices, AuthService) => {
 
-    async function Execute(firstName, lastName, email) {
+    async function Execute({firstName, lastName, email, password, role}) {
         const student = await StudentRepository.getByEmail(email);
 
         // validate
-        if (!firstName || !lastName || !email) {
+        if (!firstName || !lastName || !email || !password) {
             throw new Error('validation failed');
         }
 
@@ -16,15 +16,20 @@ const AddStudent = (StudentRepository, CrmServices) => {
         }
 
         // create new student object
-        let newStudent = new Student(firstName, lastName, email);
+        let newStudent = new Student({
+            firstName, 
+            lastName, 
+            email, 
+            password: AuthService.encryptPassword(password), 
+            role
+        });
 
         // persist student
         newStudent = await StudentRepository.add(newStudent);
-
         // notify crm system
-        await CrmServices.notify(newStudent);
+        await CrmServices.notify({id: newStudent._id});
 
-        return newStudent;
+        return {id: newStudent._id};
     }
     return {
         Execute

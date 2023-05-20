@@ -1,4 +1,4 @@
-import CrmServices from '../../application/contracts/CrmServices.js';
+import CrmServices from '../../application/contracts/services/CrmServices.js';
 
 export default class UniversityCrmServices extends CrmServices {
 
