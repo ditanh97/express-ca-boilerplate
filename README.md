@@ -30,5 +30,6 @@ Express app does not come with security HTTP headers, it expose sensitive inform
 - The architecture is inspired from :
     - [Royib - Clean Architecture Node](https://github.com/royib/clean-architecture-node)
     - [panagiop - Node CA with mongodb and redis](https://github.com/panagiop/node.js-clean-architecture)
-- Health check - [Health Checks and Graceful Shutdown for Node.js Applications](https://www.godaddy.com/engineering/2018/02/22/announcing-terminus/)
-- Helmet - [Helmet](https://blog.logrocket.com/using-helmet-node-js-secure-application/)
+- [Health Checks](https://www.godaddy.com/engineering/2018/02/22/announcing-terminus/)
+- [Helmet](https://blog.logrocket.com/using-helmet-node-js-secure-application/)
+- [Logger](https://lioncoding.com/logging-in-express-js-using-winston-and-morgan/#:~:text=Morgan%20is%20a%20Node.,even%20a%20built%2Din%20profiler.)
