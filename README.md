@@ -3,7 +3,7 @@ Node Clean Architecture
 =======================
 
 # Features
-==========
+
 ## Health Check
 Since application is constanly serving request for users, we want to ship features and fixes as soon as they are ready. If user using the product at the time of the deployment, the app should stop accepting new requests, finish all the ongoing request, and clean up the resources it used. Resources may include database connection or file locks
 - healthcheck end point :`localhost:${port}/healthcheck`
@@ -19,7 +19,7 @@ Express app does not come with security HTTP headers, it expose sensitive inform
 `helmet` is `express` middlleware, which is a wrapper of 15 sub-middlewares 
 
 
-### Reference
+# Reference
 
 - The architecture inspired inspire from :
     - [Royib - Clean Architecture Node](https://github.com/royib/clean-architecture-node)
